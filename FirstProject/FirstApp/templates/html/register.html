@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body bgcolor="DeepPink">
+    <form action="{% url 'register' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="firstname" placeholder="Enter Your Fist Name"><br>
+        <input type="text" name="lastname" placeholder="Enter Your Last Name"><br>
+        <input type="email" name="email" placeholder="Enter Your Email Id"><br>
+        <input type="text" name="address" placeholder="Enter Your address here"><br>
+        <h3>gender</h3>
+        <input type="radio" name="gender" value="male">
+        <label for="male">male</label><br>
+        <input type="radio" name="gender" value="female">
+        <label for="female">female</label><br>
+        <input type="submit" name="submit" value="Submit Here">
+
+    </form>
+</body>
+</html>
